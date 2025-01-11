@@ -48,7 +48,6 @@ The **Online Student Council Voting System** is a comprehensive platform designe
 4. **Real-time Updates**
    - Real-time result updates using **Socket.IO**.
 
-
 ## API Endpoints
 
 ### Authentication
@@ -116,26 +115,10 @@ The **Online Student Council Voting System** is a comprehensive platform designe
 - **Add Candidate**
   - `POST /api/candidates/add`
   - Form Data:
-    - 
-
-fullName
-
-: Candidate name
-    - 
-
-faculty
-
-: Faculty name
-    - 
-
-manifesto
-
-: Candidate manifesto
-    - 
-
-candidateImage
-
-: Image file
+    - `fullName`: Candidate name
+    - `faculty`: Faculty name
+    - `manifesto`: Candidate manifesto
+    - `candidateImage`: Image file
 
 - **Approve/Reject Candidate**
   - `POST /api/candidates/approve`
@@ -168,29 +151,17 @@ candidateImage
 ## Instructions for Frontend Developer
 
 1. **Connect to the Backend**
-   - Update `BASE_URL` in the frontend to point to the backend server (e.g., 
-
-http://localhost:5000
-
-).
+   - Update `BASE_URL` in the frontend to point to the backend server (e.g., `http://localhost:5000`).
 
 2. **Endpoints Interaction**
    - Use the provided API documentation for route interactions.
-   - Use 
-
-Authorization
-
- headers with JWT tokens for protected routes.
+   - Use `Authorization` headers with JWT tokens for protected routes.
 
 3. **Real-time Updates**
    - Integrate **Socket.IO** for live result updates.
 
 4. **Static Assets**
-   - Fetch candidate images from 
-
-http://localhost:5000/uploads/<image-file-name>
-
-.
+   - Fetch candidate images from `http://localhost:5000/uploads/<image-file-name>`.
 
 5. **Sample Workflows**
    - **Voter Registration** → OTP Verification → Voting.
@@ -211,15 +182,21 @@ http://localhost:5000/uploads/<image-file-name>
    npm install
    npm start
    ```
-4. Access the frontend at 
+4. Access the frontend at `http://localhost:5173/` and ensure it communicates with the backend at `http://localhost:5000`.
 
-http://localhost:5173/
+## Credentials for Access
 
- and ensure it communicates with the backend at 
+### Voter Login Credentials
+- **Mobile**: 252907841579
+- **Password**: 12345
 
-http://localhost:5000
+### Admin Login Credentials
+- **Email**: saidabdishakur2000@gmail.com
+- **Password**: 12345
 
-.
+### Super Admin Login Credentials
+- **Email**: superadmin@example.com
+- **Password**: admin@123
 
 ## Collaboration
 
